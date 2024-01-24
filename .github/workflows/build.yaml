@@ -20,7 +20,7 @@ jobs:
     - name: Build and Push Docker Image
       run: |
         docker buildx create --use
-        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/ayalasegal/toga-task:latest .
+        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/ayalasegal/toga-task:latest --push .
         echo ${{ secrets.DOCKER_TOKEN }} | docker login ghcr.io -u ayalasegal --password-stdin
         docker push ghcr.io/ayalasegal/toga-task:latest
       env:
