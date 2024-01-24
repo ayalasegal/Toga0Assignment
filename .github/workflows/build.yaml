@@ -24,5 +24,7 @@ jobs:
         echo ${{ secrets.DOCKER_TOKEN }} | docker login ghcr.io -u ayalasegal --password-stdin
         docker push ghcr.io/ayalasegal/toga-task:latest
       env:
+      
         DOCKER_CLI_ASK_PASS: 0
         DOCKER_BUILDKIT: 1
+        
