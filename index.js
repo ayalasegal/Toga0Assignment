@@ -16,9 +16,4 @@ function findPeakElementRecursive(arr, low, high) {
     return findPeakElementRecursive(arr, 0, arr.length - 1);
   }
   
-  const array = [1, 2, 3, 1];
-  const peakIndex = findPeakElement(array);
-  const peakElement = array[peakIndex];
-  
-  console.log(`Peak element is ${peakElement} at index ${peakIndex}`);
   
